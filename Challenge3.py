@@ -1,5 +1,5 @@
 """
-Largest prime factor 
+Largest prime factor me
 
 28/05/2024
 """
@@ -26,7 +26,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
 
 
