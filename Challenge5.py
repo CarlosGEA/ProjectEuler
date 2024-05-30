@@ -8,12 +8,6 @@ TEST = 10
 TEST_ANS = 2520
 CHALLENGE = 20
 
-
-# def smallest_multiple(g_factor):
-
-#     return
-
-
 def prime_numbers(num):
     """
     Finds all prime factors less than nums
@@ -27,7 +21,6 @@ def prime_numbers(num):
                 primes.append(n)
             i += 1
     return primes
-
 
 def primeFactors(n):
     factors = []
@@ -43,11 +36,8 @@ def primeFactors(n):
         factors.append(n)    
     return factors
 
-
-def main():
-
-    primes = prime_numbers(CHALLENGE)
-    numbers = (list(range(1,CHALLENGE)))
+def add_prime_factors(primes, num):
+    numbers = (list(range(1,num)))
     non_primes = list(set(numbers) - set(primes))
 
     for n in non_primes:
@@ -58,9 +48,13 @@ def main():
                 dummy_primes.remove(p)
             else:
                 primes.append(p)
-    ans = np.prod(np.array(primes))  
+    return primes
 
-    # print(sorted(primes))
+def main():
+
+    primes = prime_numbers(CHALLENGE)
+    primes = add_prime_factors(primes, CHALLENGE)
+    ans = np.prod(np.array(primes).astype(np.float64))  
     print(
         f"The smallest positive number that is evenly divisible by all of the numbers from 1 to {TEST} is {TEST_ANS}"
     )
@@ -71,14 +65,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# 20 - 2,4,5,10
-# 19
-# 18 - 2,3,6,9
-# 17
-# 16 - 2,4,8
-# 15
-# 14 - 2,7
-# 13
-# 12
-# 11
