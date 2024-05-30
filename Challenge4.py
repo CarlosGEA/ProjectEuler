@@ -1,5 +1,5 @@
 """
-Name : 
+Name : Largest Palindrome Product
 Date created : 28/05/2024
 """
 
