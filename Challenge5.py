@@ -10,7 +10,7 @@ CHALLENGE = 20
 
 def prime_numbers(num):
     """
-    Finds all prime factors less than nums
+    Finds all primes less than nums
     """
     primes = [1]
     for n in range(2, num + 1):
