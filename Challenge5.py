@@ -1,6 +1,6 @@
 """
 Name : Smallest Multiple
-Date created : 30/05/2024
+Date created : 30-05-2024
 """
 import numpy as np
 import math

@@ -1,6 +1,6 @@
 """
 Name : Largest Product
-Date created : 31/05/2024
+Date created : 31-05-2024
 """
 
 NUM = (

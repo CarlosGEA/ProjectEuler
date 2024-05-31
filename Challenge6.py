@@ -1,6 +1,6 @@
 """
 Name : Sum Square Difference
-Date created : 30/05/2024
+Date created : 30-05-2024
 """
 
 TEST = 10

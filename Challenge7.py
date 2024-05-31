@@ -1,6 +1,6 @@
 """
 Name : 10001st Prime
-Date created : 30/05/2024
+Date created : 30-05-2024
 """
 
 import math

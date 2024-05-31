@@ -1,6 +1,6 @@
 """
 Name : Largest Palindrome Product
-Date created : 28/05/2024
+Date created : 28-05-2024
 """
 
 TWOP = 9009

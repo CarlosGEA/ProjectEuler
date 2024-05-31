@@ -1,7 +1,6 @@
 """
-Largest prime factor me
-
-28/05/2024
+Name : Largest prime factor 
+Date created : 28-05-2024
 """
 NUMBER = 600851475143
 TRIAL  = 13195

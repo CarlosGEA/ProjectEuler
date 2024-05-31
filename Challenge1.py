@@ -1,6 +1,6 @@
 """
-Multiples of 3 or 5 
-Date created : 27/05/2024
+Name : Multiples of 3 or 5 
+Date created : 27-05-2024
 """
 
 N = 1000
