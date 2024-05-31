@@ -3,11 +3,11 @@ Name : Smallest Multiple
 Date created : 30/05/2024
 """
 import numpy as np
+import math
 
 TEST = 10
 TEST_ANS = 2520
 CHALLENGE = 20
-
 def prime_numbers(num):
     """
     Finds all primes less than nums
@@ -27,8 +27,7 @@ def primeFactors(n):
     while n % 2 == 0:
         factors.append(2)
         n = n // 2
-         
-    for i in range(3,int(np.sqrt(n))+1,2):         
+    for i in range(3,int(math.sqrt(n))+1,2):         
         while n % i== 0:
             factors.append(i)
             n = n // i
@@ -54,7 +53,7 @@ def main():
 
     primes = prime_numbers(CHALLENGE)
     primes = add_prime_factors(primes, CHALLENGE)
-    ans = np.prod(np.array(primes).astype(np.float64))  
+    ans = math.prod(primes)
     print(
         f"The smallest positive number that is evenly divisible by all of the numbers from 1 to {TEST} is {TEST_ANS}"
     )
