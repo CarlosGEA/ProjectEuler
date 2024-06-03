@@ -19,7 +19,7 @@ def factors(num):
     if num == i * i:
         total -= 1
     return total
-
+        
 
 def main():
 
