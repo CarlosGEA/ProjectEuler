@@ -5,20 +5,8 @@ Date created : 03-06-2024
 
 MAX = 1e6
 
-
-def NonRecursiveCollatz(i):
-    counter = 1
-    while i != 1:
-        counter = counter + 1
-        if i % 2 == 0:
-            i = i / 2
-        else:
-            i = 3 * i + 1
-    return counter
-
-
 def main():
-
+    # new attempt with dictionary
     test_nums = list(range(1, int(MAX) + 1))
     highest = 0
     max_number = 0
@@ -34,7 +22,6 @@ def main():
         if length > highest:
             highest = length
             max_number = i
-    # print(chain)
     print(f"The maximum length is size {highest}")    
     print(f"The number that produces the maximum length chain is {max_number}")
 

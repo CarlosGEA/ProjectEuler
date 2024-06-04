@@ -24,7 +24,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-# Gppd recursion method
+# Good recursion method
 # from typing import Dict, List, Optional, Tuple
 
 
