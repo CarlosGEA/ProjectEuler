@@ -43,30 +43,31 @@ def search(row, grid, position_count=None):
 
     if row == 0:
         position_count[(0, 0)] = grid[0][0]
-        return grid[0][0] 
-    else:    
-        prev_count = search(row - 1, grid, position_count)
+        return position_count
+    else:
+        position_count = search(row - 1, grid, position_count)
         for elem in range(row + 1):
-            print(row, elem)
-            count = prev_count + grid[row][elem]
-            if (row, elem) in position_count:
-                position_count[(row, elem)] = max(position_count[(row, elem)], count)
+            if elem == 0:
+                prev_count = position_count[(row - 1, elem)]
+            elif elem == row:
+                prev_count = position_count[(row - 1, elem - 1)]
             else:
-                position_count[(row, elem)] = count     
-    print(position_count)
-    return count
+                prev_count = max(
+                    position_count[(row - 1, elem - 1)], position_count[(row - 1, elem)]
+                )
+            count = prev_count + grid[row][elem]
+            position_count[(row, elem)] = count
+        return position_count
 
 
 def main():
-    rows = 4
-    grid = setup(TRIAL, rows)
-    # grid = setup(CHALLENGE, 15)
-    position_count = {}
-    for row in range(rows):
-        for elem in range(row + 1):
-            a = 2
-            
-    ans = search(rows, grid)
+    rows = 15
+    grid = setup(CHALLENGE, rows)
+    position_counts = search(rows - 1, grid)
+    max_count = 0
+    for elem in range(rows):
+        max_count = max(max_count, position_counts[(rows - 1, elem)])
+    print(f"The maximum sum path is {max_count}")
     return None
 
 
