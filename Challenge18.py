@@ -23,9 +23,6 @@ CHALLENGE = (
 
 TRIAL = "3 " "7 4 " "2 4 6 " "8 5 9 3 "
 
-# do running highest count for each number down the grid
-
-
 def setup(input, rows):
     triangle = input.split(" ")
     grid = []
