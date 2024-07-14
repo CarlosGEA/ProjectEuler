@@ -2,7 +2,9 @@
 Name : Digit Cancelling Fractions
 Date created : 12-07-2024
 """
+
 import math
+
 
 def main():
 
@@ -14,9 +16,7 @@ def main():
 
             str_n = str(numerator)
             str_d = str(denominator)
-            set_n = set(str_n)
-            set_d = set(str_d)
-            common = set_n.intersection(set_d)
+            common = set(str_n).intersection(set(str_d))
             if common:
                 c_numerator = int(str_n.replace(list(common)[0], "", 1))
                 c_denominator = int(str_d.replace(list(common)[0], "", 1))
@@ -26,8 +26,8 @@ def main():
 
             if normal_frac == cancel_frac and int(cancel_frac) != 1:
                 non_trivial_fractions.append(normal_frac)
-    
-    overall_denominator = int(math.prod([1/x for x in non_trivial_fractions]))
+
+    overall_denominator = int(math.prod([1 / x for x in non_trivial_fractions]))
 
     print(non_trivial_fractions)
     print(overall_denominator)
