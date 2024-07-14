@@ -5,13 +5,14 @@ Date created : 14-07-2024
 
 import math
 
-MAX = 7 * math.factorial(9)
+FACTORIALS = {digit: math.factorial(digit) for digit in range(10)} # Updated to not recalculate this
+MAX = 7 * FACTORIALS[9]
 
 
 def FactorialSum(num):
     fsum = 0
     for digit in str(num):
-        fsum += math.factorial(int(digit))
+        fsum += FACTORIALS[int(digit)]
     return fsum
 
 
