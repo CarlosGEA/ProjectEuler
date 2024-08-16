@@ -50,8 +50,6 @@ def main():
     sieve_num = 1000000
     primes = sieve(sieve_num)
     max = 0
-
-    # primes = [prime for prime in primes if 3 in dict(Counter(list(str(prime)))).values()]
     for num in primes[4:]:
         replace_list = generate_combinations(range(len(str(num)) - 1))
         for replacements in replace_list:
@@ -80,23 +78,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-    # filter primes to keep only those with 3 repeat digits
-    # primes = [prime for prime in primes if 3 in dict(Counter(list(str(prime)))).values()]
-    # for num in primes:
-    #     count = 0
-    #     digit_count = Counter(str(num))
-    #     for digit, dcount in digit_count.items():
-    #         if dcount == 3:
-    #             repeat = digit
-
-    #     for digits in range(10):  # gives numbers 0-9
-    #         test_str = str(num)
-    #         test_str = test_str.replace(repeat, str(digits))
-    #         test = int(test_str)
-    #         if isPrime(test) and len(str(test)) == len(str(num)):
-    #             count += 1
-    #         if count == 8:
-    #             print(f"Answer is {num} with {count} primes")
-    #             return
