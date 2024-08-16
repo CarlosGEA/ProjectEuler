@@ -4,7 +4,8 @@ Date created : 30-07-2024
 """
 
 import itertools
-
+from collections import Counter
+import math
 
 def sieve(n):
     is_prime = [True] * n
@@ -32,13 +33,24 @@ def generate_combinations(lst):
     all_combinations = [list(tup) for tup in all_combinations]
     return all_combinations
 
+def isPrime(n):
+    if n < 2:
+        return False
+    if n == 2 or n == 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    for x in range(6, math.floor(math.sqrt(n)) + 2, 6):
+        if n % (x - 1) == 0 or n % (x + 1) == 0:
+            return False
+    return True
 
 def main():
 
     sieve_num = 1000000
     primes = sieve(sieve_num)
     max = 0
-    # print(primes, "\n", len(primes))
+
     for num in primes[4:]:
         replace_list = generate_combinations(range(len(str(num)) - 1))
         for replacements in replace_list:
@@ -48,21 +60,19 @@ def main():
                 for index in replacements:
                     test_str = test_str[:index] + str(digits) + test_str[index + 1 :]
                 test = int(test_str)
-                if test in primes and len(str(test)) == len(str(num)):
+                if isPrime(test) and len(str(test)) == len(str(num)): 
                     count += 1
             if count > max:
                 max = count
                 print(f"Update - new num is {num} with {max} primes")
-                #######
                 print_check = str(num)
                 for index in replacements:
                     print_check = print_check[:index] + "*" + print_check[index + 1 :]
                 print(print_check)
-                #######
-            if max == 7:
+            if max == 8:
                 print(f"Answer is {num} with {max} primes")
                 return
-            
+
     print(f"Max number of primes when sieving up to {sieve_num} is {max}")
     return None
 
