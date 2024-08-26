@@ -3,7 +3,7 @@ Name : Prime Pair Sets
 Date created : 21-08-2024
 """
 
-import math
+import math, time
 
 def sieve(n):
     is_prime = [True] * n
@@ -35,39 +35,39 @@ def isPrime(n):
             return False
     return True
 
-
 def main():
 
-    primes = sieve(10000)[1:]
-    prime_sets = []
-
+    start = time.time()
+    primes = sieve(10000)[1:] # if it's bigger it might find another solution
+    
     for num in primes:
-        print(num)
-        if num < 1000:
-            prime_sets.append([num])
-        dummy_sets = []
-        for s in prime_sets:
-            if all(isPrime(int(str(n) + str(num))) and isPrime(int(str(num) + str(n))) for n in s):
-                dummy_sets.append(s.copy())
-                s.append(num)
+        prime_sets = [[num]]
+
+        for b in primes:
+            if b < num:
                 continue
-        prime_sets += dummy_sets
-    min_sum = 0
-    for p in prime_sets:
-        if len(p) == 5:
-            print(p)
-            if min_sum == 0:
-                min_sum = sum(p)
-            elif sum(p) < min_sum:
-                min_sum = sum(p)
-    if min_sum != 0:
-        print(f"The answer is {min_sum}")
-    else:
-        print("No solution found")
+            dummy_sets = []
+            for s in prime_sets:
+                if all(isPrime(int(str(n) + str(b))) and isPrime(int(str(b) + str(n))) for n in s):
+                    dummy_sets.append(s.copy())
+                    s.append(b)
+
+                    if len(s) == 5:
+                        print(s)
+                        print(f"The answer is {sum(s)}")
+                        end = time.time()
+                        print(f"Time: {end-start}")
+                        return None
+                    continue
+            prime_sets += dummy_sets
+            
+
+    print("No solution found")
+
+    end = time.time()
+    print(f"Time: :{end-start}")
     return None
 
-
-# make more efficient
 
 
 if __name__ == "__main__":
