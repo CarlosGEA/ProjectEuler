@@ -2,6 +2,7 @@
 Name : Double-base Palindromes
 Date created : 14-07-2024
 """
+
 import time
 
 MAX = 1_000_000
@@ -12,31 +13,21 @@ def isPalindrome(string):
         return True
     return False
 
+
 start_time = time.time()
+
+
 def main():
-    
+
     palindrome_nums = []
     for num in range(1, MAX + 1):
         str_num = str(num)
         str_bin = bin(num)[2:]
         if isPalindrome(str_num) and isPalindrome(str_bin):
-            palindrome_nums. append(num)
-    print(palindrome_nums)
+            palindrome_nums.append(num)
     print(f"The sum of all Double-base palindromes less than {MAX} is {sum(palindrome_nums)}")
 
     return None
-
-
-# def main():
-    
-#     palsum = 0
-#     for num in range(1, MAX + 1):
-#         str_num = str(num)
-#         str_bin = bin(num)[2:]
-#         if isPalindrome(str_num) and isPalindrome(str_bin):
-#             palsum += num
-#     print(f"The sum of all Double-base palindromes less than {MAX} is {palsum}")
-#     return None
 
 
 if __name__ == "__main__":

@@ -4,16 +4,6 @@ Date created : 22-07-2024
 """
 
 import math
-import itertools
-
-
-# def generateTriangle():
-#     t = 1
-#     d = 1
-#     while True:
-#         yield t
-#         t += d
-#         d += 1
 
 
 def generateTriangle(n):
@@ -29,8 +19,6 @@ def isHexagonal(num):
 
 
 def main():
-    # for p in itertools.islice(generateTriangle(), 10):
-    #     print(p)
     tph = 0
     n = 1
     while tph <= 40755:

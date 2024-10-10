@@ -15,7 +15,6 @@ def getFactors(n):
 
 
 def main():
-    # amicable_pairs = {}
     amicable_pairs = []
     for num in range(1, 10000):
         factor_sum = sum(getFactors(num))

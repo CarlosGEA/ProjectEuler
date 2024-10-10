@@ -19,7 +19,7 @@ def factors(num):
     if num == i * i:
         total -= 1
     return total
-        
+
 
 def main():
 
@@ -30,10 +30,7 @@ def main():
     while number <= CHALLENGE:
         triangle_number += count
         number = factors(triangle_number)
-        # if number > 200:
-        #     print(triangle_number, number)
         count += 1
-
 
     print(f"The first triangle number to have over {CHALLENGE} divisors is {triangle_number}")
     return None

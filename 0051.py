@@ -4,7 +4,6 @@ Date created : 30-07-2024
 """
 
 import itertools
-from collections import Counter
 import math
 
 def sieve(n):

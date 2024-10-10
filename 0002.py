@@ -1,5 +1,5 @@
 """
-Name : Sum of even Fibonnaci numbers less than 4e6 
+Name : Even Fibonnaci Numbers 
 Date created : 27-05-2024
 """
 

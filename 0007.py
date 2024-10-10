@@ -36,20 +36,15 @@ def is_prime(n):
 
 
 def main():
-
-    # sol = prime(TEST)
-    # primes = prime(CHALLENGE)
-    # sol = primes[-1]
     seen = 0
-    n = 1
+    num = 1
     while seen < CHALLENGE:
-        n += 1
-        if is_prime(n):
+        num += 1
+        if is_prime(num):
             seen += 1
-    print(n)
 
     print(f"Prime number {TEST} is 13.")
-    # print(f"My prime number {CHALLENGE} is {sol}.")
+    print(f"My prime number {CHALLENGE} is {num}.")
 
     return None
 

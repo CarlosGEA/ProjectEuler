@@ -19,8 +19,6 @@ def main():
     lex = "".join((map(str, range(CHALLENGE))))
 
     perms = ["".join(p) for p in permutations(lex)]
-    # perms_int = list(map(int, perms))
-    # sorted(perms_int)
     print(f"The answer is {perms[n-1]}")
 
     return None

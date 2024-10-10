@@ -1,5 +1,5 @@
 """
-Name : 
+Name : Goldbach's Other Conjecture
 Date created : 22-07-2024
 """
 

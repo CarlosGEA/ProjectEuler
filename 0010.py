@@ -1,5 +1,5 @@
 """
-Name : Sum of primes
+Name : Sum of Primes
 Date created : 31-05-2024
 """
 

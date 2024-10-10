@@ -1,5 +1,5 @@
 """
-Name : Largest product in grid
+Name : Largest Product in a Grid
 Date created : 01-06-2024
 """
 
@@ -64,10 +64,8 @@ def main():
                 if diagonal_left > max_prod:
                     max_prod = diagonal_left
                     max_indices = [i, j]
-            # break
-        # break
+
     print(f"The greatest product of {n} numbers in the grid is {max_prod} at starting index {max_indices}")
-    # print(max_indices)
 
     return None
 

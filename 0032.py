@@ -61,8 +61,6 @@ def main():
                 pan_nums.add(num)
                 factor_nums.append(factors)
 
-    print(pan_nums)
-    print(factor_nums)
     print(f"The sum of all Pandigits containing 1-9 is {sum(pan_nums)}")
 
     return None

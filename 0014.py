@@ -6,7 +6,6 @@ Date created : 03-06-2024
 MAX = 1e6
 
 def main():
-    # new attempt with dictionary
     test_nums = list(range(1, int(MAX) + 1))
     highest = 0
     max_number = 0

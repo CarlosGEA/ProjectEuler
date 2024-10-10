@@ -21,8 +21,5 @@ def main():
     return None
 
 
-# new numerator and denominator * 2 of current + one previous
-
-
 if __name__ == "__main__":
     main()

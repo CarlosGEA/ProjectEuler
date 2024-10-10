@@ -4,7 +4,6 @@ Date created : 14-07-2024
 """
 
 import math
-import itertools
 
 TEST = 100
 CHALLENGE = 1_000_000
@@ -42,7 +41,7 @@ def main():
             circular_primes.update(nums)
     circular_primes = sorted(list(circular_primes))
     # print(circular_primes)
-    
+
     print(f"There are {len(circular_primes)} circular primes below {CHALLENGE}")
     return None
 

@@ -13,9 +13,6 @@ def main():
             ways[i] += ways[i-x]
 
     print(ways[200])
-    print(ways)
-
-   
     return None
 
 

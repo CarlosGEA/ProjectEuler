@@ -1,5 +1,5 @@
 """
-Name : 
+Name : Pentagon Numbers
 Date created : 21-07-2024
 """
 

@@ -15,7 +15,6 @@ def main():
         diff = 2 * (i + 1)
         low = high + diff
         high = low + (diff * 3)
-        # print(low, high)
         count += 2 * (low + high)
 
     print(f"The sum of all diagonal elements in a {CHALLENGE}x{CHALLENGE} square is {count}")

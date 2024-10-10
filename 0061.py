@@ -77,7 +77,6 @@ def getValidPolygonals():
 def sol(nums, search_dict, count=[1]):
 
     if len(nums) == 6:  # 3
-        # print(f"Potential solution : {nums}")
         if str(nums[-1])[2:] == str(nums[0])[:2]:
             print(f"The answer is {sum(nums)} with numbers {nums} and count {count[0]}")
             return True
@@ -86,7 +85,6 @@ def sol(nums, search_dict, count=[1]):
             count[0] -= 1
             return False
 
-    # print(f"Nums: {nums} | Count: {count} | Where to search: {search_dict.keys()}")
     repeat = str(nums[count[0] - 1])[2:]
     for k in search_dict.keys():
         for n in search_dict[k]:
@@ -99,7 +97,6 @@ def sol(nums, search_dict, count=[1]):
                     return True
 
     if count[0] > 1:
-        # print(f"No direct sol", nums, count, search_dict.keys())
         nums.pop()
         count[0] -= 1
     return False
@@ -115,7 +112,6 @@ def main():
     dummy_dict = dict(polygonal_dict)
     del dummy_dict[start]
     for num in polygonal_dict[start]:
-
         if sol([num], dummy_dict):
             break
 

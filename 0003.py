@@ -1,5 +1,5 @@
 """
-Name : Largest prime factor 
+Name : Largest Prime Factor 
 Date created : 28-05-2024
 """
 NUMBER = 600851475143
