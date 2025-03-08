@@ -49,8 +49,8 @@ def main():
             current_weekday, current_month, current_year
         )
 
-    print(current_weekday, current_month, 1900 + current_year)
-    print(count)
+    # print(current_weekday, current_month, 1900 + current_year)
+    print(f"The number of sundays is {count}")
     return None
 
 

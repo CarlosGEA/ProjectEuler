@@ -38,7 +38,7 @@ def main():
                 max_count = i
                 prod = a * b
 
-    print(max_count, prod)
+    print(f"The quadratic expression that produces the maximum number of primes for consecutive values of n is {prod} with a total of {max_count}")
 
     return None
 

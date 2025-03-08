@@ -20,7 +20,8 @@ def isPrime(n):
 
 
 def main():
-    double_square = [2 * n * n for n in range(1, 30)]
+    double_square = [2 * n * n for n in range(1, 1000)]
+    # make double square large enough
     possible_nums = set()
     scn = 0
     n = 1

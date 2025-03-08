@@ -20,6 +20,7 @@ def main():
 
     factors = factorise_n(NUMBER)
     print(f" The factors of {NUMBER} are {factors}")
+    print(f" The largest prime factor of {NUMBER} is {factors[-1]}")
     return None
 
 

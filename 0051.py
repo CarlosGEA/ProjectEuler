@@ -46,7 +46,7 @@ def isPrime(n):
 
 def main():
 
-    sieve_num = 1000000
+    sieve_num = 10000000
     primes = sieve(sieve_num)
     max = 0
     for num in primes[4:]:
