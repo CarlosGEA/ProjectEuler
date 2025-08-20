@@ -5,3 +5,5 @@ print(a)
 result = ""
 if not result:
     print("EMPTY")
+
+
