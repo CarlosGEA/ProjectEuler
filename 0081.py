@@ -27,7 +27,7 @@ def main():
     for r in rows:
         matrix.append(r.split(","))
 
-    # matrix = TRIAL
+    matrix = TRIAL
 
     nrows = len(matrix[0])
     ncols = len(matrix)
@@ -36,6 +36,7 @@ def main():
         for col in range(ncols):
 
             if row == col == 0:
+                matrix[row][col] = int(matrix[row][col])
                 continue
 
             prev_row = float("inf") if row == 0 else int(matrix[row - 1][col])
@@ -43,7 +44,7 @@ def main():
 
             matrix[row][col] = int(matrix[row][col]) + min(prev_col, prev_row)
 
-    print(matrix[-1][-1])
+    print(matrix)
 
     return None
 

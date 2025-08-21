@@ -1,12 +1,11 @@
 """
-Name : Path Sum: Three Ways
-Date created : 20-08-2025
+Name : Path Sum: Four Ways
+Date created : 21-08-2025
 """
 
 import heapq
-import json
 
-FP = "C:\\Users\\Carlos\\Documents\\Coding\\Project Euler\\ChallengeFiles\\0082_matrix.txt"
+FP = "C:\\Users\\Carlos\\Documents\\Coding\\Project Euler\\ChallengeFiles\\0083_matrix.txt"
 
 TRIAL = [
     ["131", "673", "234", "103", "18"],
@@ -25,10 +24,10 @@ TRIAL2 = [
     ["805", "332", "24", "37", "931"],
 ]
 
+# now can also go back and again from top left to bottom right
+# maybe need to think about three path locally and 2 path final logic ..
 
 def main():
-
-    # To make this be from top right to bottom left just add up all the first column, same logic. Then instead of checking final column, return final element
 
     with open(FP, "r") as f:
         data = f.read()
