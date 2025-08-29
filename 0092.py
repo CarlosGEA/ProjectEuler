@@ -11,9 +11,12 @@ MEMO = {}
 
 
 def chainCalc(num):
+    digits = num
     res = 0
-    for dig in str(num):
-        res += int(dig) ** 2
+    while digits:
+        res += (digits % 10) ** 2
+        digits //= 10
+
 
     return res
 
@@ -45,9 +48,9 @@ def main():
     print(f"The number of numbers that go to 89 is {res + 1 if CHALLENGE >= 89 else res}")
     return None
 
-
-# 3, 9, 81, 65, 61, 37, 58,89
-
+# optimise
+# https://euler.stephan-brumme.com/92/
+# https://rosettacode.org/wiki/Iterated_digits_squaring#Python
 if __name__ == "__main__":
     start_time = time.time()
     main()
